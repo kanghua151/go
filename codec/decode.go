@@ -990,6 +990,11 @@ func (d *Decoder) Decode(v interface{}) (err error) {
 	return
 }
 
+//add by kh
+func (d *Decoder) Cursor () (int) {
+	return d.rb.c
+}
+
 // this is not a smart swallow, as it allocates objects and does unnecessary work.
 func (d *Decoder) swallowViaHammer() {
 	var blank interface{}
